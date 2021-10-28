@@ -2,7 +2,7 @@
   <div v-if="isUserLoggedIn && user.type == 'admin'">
     <main-header navsel="back"></main-header>
     <div class="header">
-      <h3><i class="fas fa-tasks"></i> Borrow & Return Status</h3>
+      <h3><i class="fas fa-tasks"></i> B& Return Status</h3>
     </div>
     <div class="container-fluid">
       <div class="categories">

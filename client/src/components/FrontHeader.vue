@@ -10,7 +10,7 @@
           alt=""
           loading="lazy"
         />
-        <span class="font1">&nbsp;Library Borrow Booking System</span>
+        <span class="font1">&nbsp;Hair Cut Booking System</span>
       </router-link>
       <button
         class="navbar-toggler"
@@ -33,20 +33,14 @@
               ></router-link
             >
           </li>
-          <li class="nav-item active" v-if="isUserLoggedIn">
-            <router-link class="nav-link" active-class="active" to="/treasury"
-              ><span class="font2" style="color: #fff"
-                ><i class="fas fa-boxes"></i> Library Store</span
-              ></router-link
-            >
-          </li>
+         
           <li class="nav-item active" v-if="isUserLoggedIn">
             <router-link
               class="nav-link"
               active-class="active"
               to="/borrow/create"
               ><span class="font2" style="color: #fff"
-                ><i class="fas fa-clipboard-list"></i> Make a loan</span
+                ><i class="fas fa-clipboard-list"></i> ทำการจองคิว</span
               ></router-link
             >
           </li>
@@ -56,7 +50,7 @@
               active-class="active"
               to="/borrow/status"
               ><span class="font2" style="color: #fff"
-                ><i class="fas fa-list-ul"></i> Borrow & Return Status</span
+                ><i class="fas fa-list-ul"></i> ตรวจสอบคิว</span
               ></router-link
             >
           </li>
@@ -91,7 +85,7 @@
         </ul>
         <li v-if="isUserLoggedIn" class="nav-item dropdown form-inline">
           <div class="dropdown">
-            <span class="font2">Welcome&nbsp;</span>
+            <span class="font2">&nbsp;</span>
             <span
               class="dropdown font2"
               type="button"
@@ -106,7 +100,7 @@
               >&nbsp;&nbsp;<i class="fas fa-user-cog"></i> Admin</span
             >
             <span class="font3" v-if="user.type == 'user'"
-              >&nbsp;&nbsp;<i class="fas fa-user"></i> User</span
+              >&nbsp;&nbsp;<i class="fas fa-user"></i> </span
             >
             <div
               class="dropdown-menu dropdown-menu-right font2"
@@ -435,7 +429,7 @@ export default {
   margin-right: 5px;
 }
 .bg-light {
-  background-color: #ffbcfb !important;
+  background-color: #5f75f1 !important;
   color: #fff !important;
 }
 .modal {

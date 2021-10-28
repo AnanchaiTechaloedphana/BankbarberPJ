@@ -2,7 +2,7 @@
   <div>
     <main-header navsel="front"></main-header>
     <div class="header">
-      <h3><i class="fas fa-user-edit"></i> Edit profile</h3>
+      <h3><i class="fas fa-user-edit"></i> แก้ไขโปรไฟล์</h3>
     </div>
     <div class="container-fluid">
       <div class="container">

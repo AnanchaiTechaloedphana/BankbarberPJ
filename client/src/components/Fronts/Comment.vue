@@ -11,7 +11,7 @@
               v-model="comment"
             ></textarea>
           </p>
-          <p v-if="user == null">Login / Register for commented.</p>
+          <p v-if="user == null">Login / Register </p>
           <p v-else>
             <button type="submit" class="btn btn-primary">
               <i class="fas fa-comment"></i> Send Comment

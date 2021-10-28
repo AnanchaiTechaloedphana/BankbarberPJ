@@ -2,192 +2,22 @@
   <div>
     <main-header navsel="front"></main-header>
     <div class="header">
-      <h3><i class="fas fa-tasks"></i> Borrowing details</h3>
+      <h3><i class="fas fa-tasks"></i> ยืนยัน</h3>
     </div>
     <div class="container-fluid">
       <div class="container">
         <div class="blog-wrapper">
-          <h4>
-            <i class="far fa-clipboard"></i> Borrowing details of
-            {{ borrow.nameLend }}
-          </h4>
-          <hr />
-          <br />
-          <span class="font2">
-            <center>
-              <div class="table-responsive">
-                <table class="table table-bordered table-sm" style="width: 50%">
-                  <tbody>
-                    <tr>
-                      <th
-                        class="table-primary"
-                        style="width: 5%; background: #d3d3d3"
-                      >
-                        <i class="fas fa-clipboard-list"></i>
-                      </th>
-                      <th
-                        class="table-primary"
-                        style="background: #d3d3d3"
-                        width="30%"
-                      >
-                        Borrow ID:
-                      </th>
-                      <td style="text-indent: 0.5em">{{ borrow.id }}</td>
-                    </tr>
-                    <tr>
-                      <th
-                        class="table-primary"
-                        style="width: 5%; background: #d3d3d3"
-                      >
-                        <i class="far fa-user-circle"></i>
-                      </th>
-                      <th class="table-primary" style="background: #d3d3d3">
-                        Borrower:
-                      </th>
-                      <td style="text-indent: 0.5em">{{ borrow.nameLend }}</td>
-                    </tr>
-                    <tr>
-                      <th
-                        class="table-primary"
-                        style="width: 5%; background: #d3d3d3"
-                      >
-                        <i class="fas fa-boxes"></i>
-                      </th>
-                      <th class="table-primary" style="background: #d3d3d3">
-                        Book:
-                      </th>
-                      <td style="text-indent: 0.5em">{{ borrow.equipment }}</td>
-                    </tr>
-                    <tr>
-                      <th
-                        class="table-primary"
-                        style="width: 5%; background: #d3d3d3"
-                      >
-                        <i class="fas fa-sort-numeric-up"></i>
-                      </th>
-                      <th class="table-primary" style="background: #d3d3d3">
-                        Quantity:
-                      </th>
-                      <td style="text-indent: 0.5em">{{ borrow.number }}</td>
-                    </tr>
-                    <tr>
-                      <th
-                        class="table-primary"
-                        style="width: 5%; background: #d3d3d3"
-                      >
-                        <i class="far fa-calendar-alt"></i>
-                      </th>
-                      <th class="table-primary" style="background: #d3d3d3">
-                        Borrowed date:
-                      </th>
-                      <td style="text-indent: 0.5em">{{ borrow.dateLend | formatedDate }}</td>
-                    </tr>
-                    <tr>
-                      <th
-                        class="table-primary"
-                        style="width: 5%; background: #d3d3d3"
-                      >
-                        <i class="far fa-calendar-check"></i>
-                      </th>
-                      <th class="table-primary" style="background: #d3d3d3">
-                        Set back:
-                      </th>
-                      <td style="text-indent: 0.5em">
-                        {{ borrow.dateReturn | formatedDate }}
-                      </td>
-                    </tr>
-                    <tr>
-                      <th
-                        class="table-primary"
-                        style="width: 5%; background: #d3d3d3"
-                      >
-                        <i class="fas fa-server"></i>
-                      </th>
-                      <th class="table-primary" style="background: #d3d3d3">
-                        Status:
-                      </th>
-                      <td>
-                        <div
-                          v-if="borrow.status == 'pending review'"
-                          class="badge badge-primary text-wrap"
-                          style="width: 5rem"
-                        >
-                          <span style="font-size: 13.4px; color: #000000"
-                            ><i class="fa fa-spinner"></i><br />{{
-                              borrow.status
-                            }}</span
-                          >
-                        </div>
-                        <div
-                          v-if="borrow.status == 'approved'"
-                          class="badge badge-success text-wrap"
-                          style="width: 5rem"
-                        >
-                          <span style="font-size: 14px; color: #000000"
-                            ><i class="far fa-check-circle"></i><br />{{
-                              borrow.status
-                            }}</span
-                          >
-                        </div>
-                        <div
-                          v-if="borrow.status == 'disapproved'"
-                          class="badge badge-danger text-wrap"
-                          style="width: 5rem"
-                        >
-                          <span style="font-size: 14px; color: #000000"
-                            ><i class="far fa-times-circle"></i><br />{{
-                              borrow.status
-                            }}</span
-                          >
-                        </div>
-                        <div
-                          v-if="borrow.status == 'return'"
-                          class="badge badge-warning text-wrap"
-                          style="width: 5rem"
-                        >
-                          <span style="font-size: 14px; color: #000000"
-                            ><i class="fas fa-clipboard-check"></i><br />{{
-                              borrow.status
-                            }}</span
-                          >
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th
-                        class="table-primary"
-                        style="width: 5%; background: #d3d3d3"
-                      >
-                        <i class="far fa-calendar-check"></i>
-                      </th>
-                      <th class="table-primary" style="background: #d3d3d3">
-                        Transaction date
-                      </th>
-                      <td style="text-indent: 0.5em"> {{ borrow.createdAt | formatedDate }}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <button
-                class="btn btn-warning"
-                type="button"
-                style="width: 100%"
-                v-if="user.type == 'user'"
-                v-on:click="navigateTo('/borrow/status')"
-              >
-                <i class="fas fa-angle-double-left"></i> Back
-              </button>
-            </center>
-            <br /><br />
+         
+   
             <div v-if="user.type == 'admin'">
-              <h4><i class="fas fa-clipboard-list"></i> Admin only</h4>
+              <h4><i class="fas fa-clipboard-list"></i> ทำการยืนยัน</h4>
               <hr />
               <br />
               <center>
                 <div style="width: 50%">
                   <form v-on:submit.prevent="editBorrow">
                     <div class="col" align="left">
-                      <label for="input1">Admin Name</label>
+                      <label for="input1">ชื่อแอดมิน</label>
                       <div class="input-group mb-3">
                         <div class="input-group-prepend">
                           <span class="input-group-text" id="basic-addon1"

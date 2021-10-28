@@ -2,18 +2,18 @@
   <div>
     <main-header navsel="front"></main-header>
     <div class="header">
-      <h3><i class="fas fa-box"></i> Make a loan</h3>
+      <h3><i class="fas fa-clipboard"></i> จองคิว</h3>
     </div>
     <div class="container-fluid">
       <div class="container">
         <div class="blog-wrapper">
-          <h4><i class="far fa-clipboard"></i> Transaction details</h4>
+          <h4>เลือกช่วงเวลา</h4>
           <br />
           <span class="font2">
             <form v-on:submit.prevent="createBorrow">
               <div class="row">
                 <div class="col">
-                  <label for="input1">Name</label>
+                  <label for="input1">ชื่อ</label>
                   <div class="input-group mb-3">
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1"
@@ -32,28 +32,11 @@
                     />
                   </div>
                 </div>
-                <div class="col">
-                  <label for="input1">Transaction date</label>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1"
-                        ><i class="far fa-calendar-alt"></i
-                      ></span>
-                    </div>
-                    <input
-                      required
-                      type="date"
-                      class="form-control"
-                      placeholder="Date"
-                      v-model="data.date"
-                      disabled
-                    />
-                  </div>
-                </div>
+              
               </div>
               <div class="row">
                 <div class="col">
-                  <label for="input1">Borrow</label>
+                  <label for="input1">เลือกวัน</label>
                   <div class="input-group mb-3">
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1"
@@ -69,70 +52,27 @@
                     />
                   </div>
                 </div>
-                <div class="col">
-                  <label for="input1">Return</label>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1"
-                        ><i class="far fa-calendar-check"></i
-                      ></span>
-                    </div>
-                    <input
-                      required
-                      type="date"
-                      class="form-control"
-                      placeholder="Date"
-                      v-model="borrow.dateReturn"
-                    />
-                  </div>
-                </div>
+               
               </div>
               <div class="row">
                 <div class="col">
-                  <label for="input1">Book</label>
+                  <label for="input1">เวลาทำการ</label>
                   <div class="input-group mb-3">
                     <div class="input-group-prepend">
                       <span class="input-group-text" id="basic-addon1"
                         ><i class="fas fa-boxes"></i
                       ></span>
                     </div>
-                    <select v-model="borrow.equipment" required>
-                      <option disabled value="">Choose a book</option>
-                      <option v-for="blog in blogs" v-bind:key="blog.id">
-                        {{ blog.title }}
-                      </option>
-                    </select>
+
+                  <span></span>
+<p style="white-space: pre-line;">{{ message }}</p>
+<br>
+<textarea v-model="message" placeholder="ใส่เวลาที่ต้องการจอง"></textarea>
                   </div>
                 </div>
-                <div class="col">
-                  <label for="input1">Quantity</label>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" id="basic-addon1"
-                        ><i class="fas fa-sort-numeric-up"></i
-                      ></span>
-                    </div>
-                    <input
-                      required
-                      type="number"
-                      class="form-control"
-                      placeholder="Number"
-                      v-model="borrow.number"
-                    />
-                  </div>
-                </div>
+                
               </div>
-              <div
-                class="shadow-sm p-3 mb-5 bg-light rounded"
-                style="padding: 0.5rem !important"
-              >
-                <div class="blog-tab"><h5>Borrowing details</h5></div>
-                <p class="font3" style="margin-top: 10px">
-                  {{ borrow.equipment }} Quantity  {{ borrow.number }} Borrow Date
-                  {{ borrow.dateLend }} Return Date:
-                  {{ borrow.dateReturn }}
-                </p>
-              </div>
+            
               <div class="row">
                 <div class="col">
                   <button
@@ -140,7 +80,7 @@
                     class="btn btn-success"
                     style="width: 100%"
                   >
-                    <i class="fas fa-clipboard-check"></i> Confirm
+                    <i class="fas fa-clipboard-check"></i> ยืนยัน
                   </button>
                 </div>
                 <div class="col">
@@ -150,7 +90,7 @@
                     style="width: 100%"
                     v-on:click="navigateTo('/front')"
                   >
-                    <i class="fas fa-times-circle"></i> Cancel
+                    <i class="fas fa-times-circle"></i> ยกเลิก
                   </button>
                 </div>
               </div>
@@ -193,7 +133,7 @@ export default {
   methods: {
     async createBorrow() {
       try {
-        alert("You have completed the book borrowing list.");
+        alert("จองคิวสำเร็จ");
         await BorrowsService.post(this.borrow);
         this.$router.push({
           name: "borrow-status",
