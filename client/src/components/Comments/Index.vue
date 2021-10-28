@@ -9,6 +9,7 @@
             <p>blog id: {{ comment.blogId }}</p>
             <p>comment: {{ comment.comment }}</p>
             <p>
+                   <!-- teble -->
                 <button v-on:click="navigateTo('/comment/'+ comment.id)">Watch
                 comment</button>
                 <button v-on:click="editComment('/comment/'+ comment.id)">Edit comment</button>

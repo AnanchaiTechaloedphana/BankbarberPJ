@@ -11,6 +11,7 @@
         </div>
         <div class="blog-wrapper table-responsive">
           <span class="font2">
+            <!-- teble -->
             <table class="table table-bordered" style="width: 100%">
               <thead class="table-bordered table-dark">
                 <tr style="text-align: center">

@@ -155,7 +155,10 @@ export default {
     }
   },
 };
+
 </script>
+         <!-- scoped -->
+
 <style scoped>
 .header {
   margin-left: auto;

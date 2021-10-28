@@ -18,7 +18,9 @@
                     :src="BASE_URL + blog.thumbnail"
                     alt="thumbnail"
                     style="width: 30%"
+                    
                   />
+                     <!-- teble -->
                 </div>
               </div>
               <br />

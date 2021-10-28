@@ -10,6 +10,8 @@
           alt=""
           loading="lazy"
         />
+                 <!-- name -->
+
         <span class="font1">&nbsp;Hair Cut Booking System</span>
       </router-link>
       <button

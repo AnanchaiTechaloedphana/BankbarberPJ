@@ -4,7 +4,7 @@
  */
 
 /**
- * This file was added automatically by CKEditor builder.
+ * This file was added automatically by CKEditor 
  * You may re-use it at any time to build CKEditor again.
  *
  * If you would like to build CKEditor online again

@@ -21,7 +21,7 @@ let upload = multer({ storage: storage }).array("userPhoto", 10)
 
 module.exports = (app) => {
     /* RESFUL Api for users management */
-    // create user
+    // create user1
     app.post('/user',
         UserController.create
     )

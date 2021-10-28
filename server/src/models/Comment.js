@@ -5,4 +5,5 @@ module.exports = (sequelize, DataTypes) => {
         userId: DataTypes.STRING
     })
     return Comment
+    //eng
 }

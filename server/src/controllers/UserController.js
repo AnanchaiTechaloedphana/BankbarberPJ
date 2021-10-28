@@ -11,7 +11,7 @@ module.exports = {
             })
         }
     },
-    // create user
+    
     async create(req, res) {
         try {
             const user = await User.create(req.body)

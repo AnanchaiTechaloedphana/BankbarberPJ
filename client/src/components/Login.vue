@@ -4,6 +4,8 @@
     <div class="container-fluid">
       <center>
         <div class="blog-wrapper">
+                   <!-- name -->
+
           <h1>Admin Login</h1>
           <div style="width: 60%">
             <form v-on:submit.prevent="onLogin">

@@ -7,28 +7,27 @@ import UserCreate from '@/components/Users/CreateUser'
 import UserEdit from '@/components/Users/EditUser'
 import UserShow from '@/components/Users/ShowUser'
 
-// Authen
+
 import Login from '@/components/Login'
 
-// Comments
+
 import CommentIndex from '@/components/Comments/Index'
 
-// Blogs
 import BlogIndex from '@/components/Blogs/Index'
 import BlogCreate from '@/components/Blogs/CreateBlog'
 import BlogEdit from '@/components/Blogs/EditBlog'
 import BlogShow from '@/components/Blogs/ShowBlog'
 import BackStatus from '@/components/Blogs/BackStatus'
 
-// Upload Testing
+
 import Upload from '@/components/Utils/Upload'
 
-// Front
+
 import FrontIndex from '@/components/Fronts/Index'
 import FrontTreasury from '@/components/Fronts/Treasury'
 import FrontShow from '@/components/Fronts/ShowBlog'
 
-// Borrow
+
 import BorrowCreate from '@/components/Fronts/Borrow'
 import BorrowStatus from '@/components/Fronts/Status'
 import ShowStatus from '@/components/Fronts/ShowStatus'

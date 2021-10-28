@@ -9,6 +9,7 @@
         <div class="blog-wrapper">
           <h4><i class="far fa-clipboard"></i> Description {{ blog.title }}</h4>
           <hr />
+             <!-- teble -->
           <br />
           <span class="font2">
             <center>

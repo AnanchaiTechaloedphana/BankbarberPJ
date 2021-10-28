@@ -28,7 +28,7 @@ module.exports = {
                 where: {
                     email: email
                     // password: password
-                    // status: 'active'
+              
                 }
             })
             if (!user) {

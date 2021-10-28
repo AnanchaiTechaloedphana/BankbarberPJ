@@ -17,6 +17,7 @@
               <i class="fas fa-comment"></i> Send Comment
             </button>
           </p>
+             <!-- teble -->
         </form>
       </div>
       <transition-group tag="ul" name="fade" class="comment-list">

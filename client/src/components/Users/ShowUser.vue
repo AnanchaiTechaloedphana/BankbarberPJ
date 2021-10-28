@@ -16,6 +16,8 @@
           <span class="font2">
             <p><span class="font2">id:</span> {{ user.id }}</p>
             <p>
+                       <!-- name -->
+
               <span class="font2">Name-Lastname :</span> {{ user.name }}
               {{ user.lastname }}
             </p>

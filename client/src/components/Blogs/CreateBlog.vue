@@ -9,6 +9,7 @@
         <div class="blog-wrapper">
           <h4><i class="fas fa-boxes"></i> Description Book</h4>
           <br />
+             <!-- teble -->
           <span class="font2">
             <form v-on:submit.prevent="createBlog">
               <div class="form-group">

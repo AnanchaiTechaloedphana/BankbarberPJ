@@ -1,6 +1,6 @@
 const { Borrow } = require('../models')
 module.exports = {
-    // indx with serach Borrow
+    
     async index(req, res) {
         try {
             let borrows = null
